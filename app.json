@@ -1,13 +1,21 @@
 {
-	"expo": {
-		"scheme": "acme",
-		"web": {
-			"bundler": "metro"
-		},
-		"name": "admique",
-		"slug": "admique",
-		"experiments": {
-			"tsconfigPaths": true
-		}
-	}
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "admique",
+    "slug": "admique",
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "283c1395-7f73-4933-b47a-c822cb5bdd1e"
+      }
+    },
+    "android": {
+      "package": "com.tam11a.admique"
+    }
+  }
 }
