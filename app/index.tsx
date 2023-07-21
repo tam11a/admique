@@ -1,164 +1,59 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
-import Onboarding from "react-native-onboarding-swiper";
+import { Image, Pressable, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Link } from "expo-router";
 
 export default function Page() {
 	return (
-		<Onboarding
-			bottomBarHighlight={false}
-			SkipButtonComponent={({ ...props }) => (
-				<TouchableOpacity
-					{...props}
-					className="px-6"
+		<SafeAreaView className="flex-col items-center justify-evenly h-full">
+			<View
+				children={
+					<Image
+						source={require("../assets/icons/favicon.png")}
+						className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
+					/>
+				}
+				className="min-h-[35vh] flex flex-col items-center justify-center"
+			/>
+
+			<View>
+				<Text className="text-3xl font-black text-[#182D4D] mx-auto">
+					Admi<Text className="text-[#49A247]">Que</Text>
+				</Text>
+				<Text className="text-center max-w-[300px] mt-6 text-sm font-medium text-slate-500 mx-auto">
+					Prepare easily with{" "}
+					<Text className="font-bold text-[#182D4D]">AdmiQue</Text>. You can
+					access many course, mentors and exams for your{" "}
+					<Text className="text-[#182D4D] font-bold">
+						University Admission{" "}
+						<Text className="text-[#49A247] font-bold">Preparation</Text>
+					</Text>
+					.
+				</Text>
+			</View>
+
+			<View>
+				<Link
+					href="/onboarding"
+					asChild
 				>
-					<Text className="font-bold text-base">Skip</Text>
-				</TouchableOpacity>
-			)}
-			NextButtonComponent={({ ...props }) => (
-				<TouchableOpacity
-					{...props}
-					className="px-6"
-				>
-					<Text className="font-bold text-base">Next</Text>
-				</TouchableOpacity>
-			)}
-			DoneButtonComponent={({ ...props }) => (
-				<TouchableOpacity
-					{...props}
-					className="px-6"
-				>
-					<Text className="font-bold text-base">Done</Text>
-				</TouchableOpacity>
-			)}
-			pages={[
-				{
-					backgroundColor: "#fff",
-					image: (
-						<View
-							children={
-								<Image
-									source={require("../assets/icons/favicon.png")}
-									className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
-								/>
-							}
-							className="min-h-[35vh] flex flex-col items-center"
-						/>
-					),
-					title: (
-						<View>
-							<Text className="text-2xl font-black text-[#182D4D]">
-								Admi<Text className="text-[#49A247]">Que</Text>
-							</Text>
-						</View>
-					),
-					subtitle: (
-						<View>
-							<Text className="text-center max-w-[300px] mt-6 text-xs font-medium text-[#6C7D87]">
-								Prepare easily with{" "}
-								<Text className="font-bold text-[#182D4D]">AdmiQue</Text>. You
-								can access many course, mentors and exams for your{" "}
-								<Text className="text-[#182D4D] font-bold">
-									University Admission{" "}
-									<Text className="text-[#49A247] font-bold">Preparation</Text>
-								</Text>
-								.
-							</Text>
-						</View>
-					),
-				},
-				{
-					backgroundColor: "#fff",
-					image: (
-						<View
-							children={
-								<Image
-									source={require("../assets/icons/qbank.png")}
-									className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
-								/>
-							}
-							className="min-h-[35vh] flex flex-col items-center"
-						/>
-					),
-					title: (
-						<View>
-							<Text className="text-2xl font-black text-[#182D4D]">
-								Question <Text className="text-[#49A247]">Bank</Text>
-							</Text>
-						</View>
-					),
-					subtitle: (
-						<View>
-							<Text className="text-center max-w-[300px] mt-6 text-xs font-medium text-[#6C7D87]">
-								Access a vast collection of previous years' university admission
-								test questions and expert-curated new suggested question banks.
-								Boost your preparation by practicing with real exam-like
-								questions and increase your chances of success.
-							</Text>
-						</View>
-					),
-				},
-				{
-					backgroundColor: "#fff",
-					image: (
-						<View
-							children={
-								<Image
-									source={require("../assets/icons/exam.png")}
-									className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
-								/>
-							}
-							className="min-h-[35vh] flex flex-col items-center"
-						/>
-					),
-					title: (
-						<View>
-							<Text className="text-2xl font-black text-[#182D4D]">
-								In-App <Text className="text-[#49A247]">Exam</Text>
-							</Text>
-						</View>
-					),
-					subtitle: (
-						<View>
-							<Text className="text-center max-w-[300px] mt-6 text-xs font-medium text-[#6C7D87]">
-								Test your knowledge and track your progress with our interactive
-								in-app exams. Simulate the actual admission test environment,
-								receive instant feedback, and identify areas for improvement to
-								fine-tune your preparation.
-							</Text>
-						</View>
-					),
-				},
-				{
-					backgroundColor: "#fff",
-					image: (
-						<View
-							children={
-								<Image
-									source={require("../assets/icons/courses.png")}
-									className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
-								/>
-							}
-							className="min-h-[35vh] flex flex-col items-center"
-						/>
-					),
-					title: (
-						<View>
-							<Text className="text-2xl font-black text-[#182D4D]">
-								Online <Text className="text-[#49A247]">Courses</Text>
-							</Text>
-						</View>
-					),
-					subtitle: (
-						<View>
-							<Text className="text-center max-w-[300px] mt-6 text-xs font-medium text-[#6C7D87]">
-								Enroll in specialized academic courses designed by experienced
-								educators to tackle challenging topics of the university
-								admission test. Gain in-depth knowledge, receive personalized
-								guidance, and stay ahead in your preparation journey.
-							</Text>
-						</View>
-					),
-				},
-			]}
-		/>
+					<Pressable
+						className="mb-8"
+						android_ripple={{
+							color: "#ffffff22",
+							radius: 10000,
+							foreground: true,
+						}}
+					>
+						<Text className="bg-[#182D4D] text-white font-black text-lg px-16 py-4 rounded-full mx-auto">
+							Get Started
+						</Text>
+					</Pressable>
+				</Link>
+
+				<Text className="text-xs font-black text-slate-500 mx-auto">
+					Developed By <Text className="text-[#182D4D] text-base">TamsLab</Text>
+				</Text>
+			</View>
+		</SafeAreaView>
 	);
 }
