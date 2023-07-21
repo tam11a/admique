@@ -33,9 +33,14 @@ export default function Page() {
 				{
 					backgroundColor: "#fff",
 					image: (
-						<Image
-							source={require("../assets/icons/favicon.png")}
-							className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
+						<View
+							children={
+								<Image
+									source={require("../assets/icons/favicon.png")}
+									className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
+								/>
+							}
+							className="min-h-[35vh] flex flex-col items-center"
 						/>
 					),
 					title: (
@@ -63,9 +68,14 @@ export default function Page() {
 				{
 					backgroundColor: "#fff",
 					image: (
-						<Image
-							source={require("../assets/icons/qbank.png")}
-							className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
+						<View
+							children={
+								<Image
+									source={require("../assets/icons/qbank.png")}
+									className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
+								/>
+							}
+							className="min-h-[35vh] flex flex-col items-center"
 						/>
 					),
 					title: (
@@ -89,9 +99,14 @@ export default function Page() {
 				{
 					backgroundColor: "#fff",
 					image: (
-						<Image
-							source={require("../assets/icons/exam.png")}
-							className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
+						<View
+							children={
+								<Image
+									source={require("../assets/icons/exam.png")}
+									className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
+								/>
+							}
+							className="min-h-[35vh] flex flex-col items-center"
 						/>
 					),
 					title: (
@@ -115,9 +130,14 @@ export default function Page() {
 				{
 					backgroundColor: "#fff",
 					image: (
-						<Image
-							source={require("../assets/icons/courses.png")}
-							className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
+						<View
+							children={
+								<Image
+									source={require("../assets/icons/courses.png")}
+									className="h-[50vw] w-[50vw] max-h-60 max-w-[240px]"
+								/>
+							}
+							className="min-h-[35vh] flex flex-col items-center"
 						/>
 					),
 					title: (
